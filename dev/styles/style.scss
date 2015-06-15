@@ -1,0 +1,80 @@
+@import "bourbon";
+@import "reset";
+
+$red : #EA6045;
+$dkblue : #2f3440;
+$ltblue : #3A4C5B;
+$cream : #F3E3BF;
+$yellow : #F5B94C;
+
+$mont-stack : "Montserrat", sans-serif;
+$card-stack : "Cardo", serif;
+$source-stack : "Source Code Pro", monospace;
+
+
+a {
+	text-decoration : none;
+}
+
+nav {
+	padding-top : 55px;
+	display : block;
+	width : 220px;
+	background : transparent;
+
+	#logo {
+	@include size(150px);
+
+	background-image: url("../assets/logo.png");
+	background-size: 150px 150px;
+	margin-bottom: 20px;
+	}
+
+	a {
+		display: block;
+		margin-left: 70px;
+		width: 150px;
+		color: $dkblue;
+	}
+
+	li {
+		width: 220px;
+		height: 110px;
+		max-height: 110px;	
+		margin-bottom: 20px;
+	}
+	li:hover {
+				@include transition( background-color 1s ease-out);
+				background-color: $ltblue;
+				a{
+					@include transition( color .5s ease-out);
+					color: white;
+				}
+	}
+
+
+
+	h4 {
+		@include padding(rem( 10 ) null rem(20));		
+		font-size: rem( 14 );
+		font-family: $mont-stack;
+
+	}
+
+	h3 {
+		text-transform: uppercase;
+		font-size: rem( 18 );;
+		font-family: $mont-stack;
+		font-weight: 700;
+		@include padding(null null rem( 10 ));
+
+	}
+
+	p {
+		font-size: rem( 12 );
+		line-height: rem(18);
+		font-family: $source-stack;
+		@include padding(null null rem(10));
+
+	}
+}
