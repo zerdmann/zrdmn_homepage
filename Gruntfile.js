@@ -19,6 +19,9 @@ module.exports = function(grunt) {
       }
     },
     watch: {
+      options : {
+        livereload : true,
+      },
       sass : {
         files : ['dev/styles/*.scss'],
         tasks : ['sass']
@@ -26,16 +29,32 @@ module.exports = function(grunt) {
       bake : {
         files : ['dev/partials/**'],
         tasks : ['bake:dev']
-
+      },
+      images : {
+        files : ['dev/img/*'],
+        tasks : ['newer:imagemin:dynamic']
       }     
     },
     bake: {
       dev: {
+        options :{
+          reload : true
+        },
         files : {
           "dist/index.html" : "dev/index.html"
-        }
+        },
       }
-    }
+    },
+    imagemin : {
+      dynamic : {
+        files : [{
+          expand : true,
+          cwd : 'dev/img/',
+          src : ['**/*.{png,jpg,gif}'],
+          dest : 'dist/img/'
+        }]
+      }
+    },
 
   });
 
@@ -43,8 +62,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-bake');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-newer');
 
   // Default task.
-  grunt.registerTask('default', ['sass', 'bake']);
+  grunt.registerTask('default', ['sass', 'bake', 'newer:imagemin']);
 
 };
