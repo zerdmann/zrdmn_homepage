@@ -14,7 +14,7 @@ module.exports = function(grunt) {
     sass : {
       dev : {
         files : {
-          "dist/styles/main.css" : "dev/styles/main.scss"
+          "dist/styles/style.css" : "dev/styles/style.scss"
         }
       }
     },
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
       },
       bake : {
         files : ['dev/partials/**'],
-        tasks ; ['bake:dev']
+        tasks : ['bake:dev']
 
       }     
     },
