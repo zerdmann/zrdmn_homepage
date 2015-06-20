@@ -1,0 +1,20 @@
+$red : #EA6045;
+$dkblue : #2f3440;
+$ltblue : #3A4C5B;
+$cream : #F3E3BF;
+$yellow : #F5B94C;
+
+$mont-stack : "Montserrat", sans-serif;
+$card-stack : "Cardo", serif;
+$source-stack : "Source Code Pro", monospace;
+
+a {
+	text-decoration : none;
+}
+
+p a {
+	font-family : $card-stack;
+	font-variant: small-caps;
+	font-size : 1.25em;
+	color : $red;
+}

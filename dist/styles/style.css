@@ -51,6 +51,12 @@ table {
 a {
   text-decoration: none; }
 
+p a {
+  font-family: "Cardo", serif;
+  font-variant: small-caps;
+  font-size: 1.25em;
+  color: #EA6045; }
+
 nav {
   padding-top: 55px;
   display: block;
@@ -98,5 +104,12 @@ nav {
     line-height: 1.125rem;
     font-family: "Source Code Pro", monospace;
     padding-bottom: 0.625rem; }
+
+section#resume h1#name {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 5.25rem;
+  color: #2f3440; }
 
 /*# sourceMappingURL=style.css.map */
