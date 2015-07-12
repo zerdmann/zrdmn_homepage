@@ -12,9 +12,19 @@ a {
 	text-decoration : none;
 }
 
-p a {
+p a, .link {
+	text-transform: lowercase;
 	font-family : $card-stack;
 	font-variant: small-caps;
 	font-size : 1.25em;
 	color : $red;
+	letter-spacing : 1px;
+}
+
+p a:hover, .link:hover {
+	
+}
+
+h1, h2, h3, h4, h5 {
+	color : $dkblue;
 }

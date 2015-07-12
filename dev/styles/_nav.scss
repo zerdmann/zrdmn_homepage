@@ -1,8 +1,13 @@
+@import "nav-breakpoints";
+
 nav {
 	padding-top : 55px;
-	display : block;
-	width : 220px;
+	display : inline-block;
+	min-width : 220px;
+	width: rem(220px);
 	background : transparent;
+	float: left;
+	margin-right: 7.321vw;
 
 	#logo {
 	@include size(150px);
@@ -17,40 +22,56 @@ nav {
 		margin-left: 70px;
 		width: 150px;
 		color: $dkblue;
+		@include transition( color .1s);
+
 	}
 
 	li {
+		background-color: transparent;;
 		width: 220px;
 		height: 110px;
 		max-height: 110px;	
 		margin-bottom: 20px;
+		@include transition( background-color .4s);
+
 	}
 	li:hover {
-				@include transition( background-color 1s ease-out);
 				background-color: $ltblue;
 				a{
-					@include transition( color .5s ease-out);
 					color: white;
 				}
-	}
 
+				h4 {
+					color:white;
+				}
+
+				h3{
+					color:white;
+				}
+
+
+	}
 
 
 	h4 {
-		@include padding(rem( 10 ) null rem(20));		
+		@include padding(rem( 10 ) null rem(18));		
 		font-size: rem( 14 );
 		font-family: $mont-stack;
 
 	}
 
 	h3 {
+		color: $ltblue;
 		text-transform: uppercase;
+		position : relative;
 		font-size: rem( 18 );;
 		font-family: $mont-stack;
 		font-weight: 700;
-		@include padding(null null rem( 10 ));
+		@include padding(null null rem( 8 ));
 
 	}
+
+
 
 	p {
 		font-size: rem( 12 );

@@ -51,17 +51,25 @@ table {
 a {
   text-decoration: none; }
 
-p a {
+p a, .link {
+  text-transform: lowercase;
   font-family: "Cardo", serif;
   font-variant: small-caps;
   font-size: 1.25em;
-  color: #EA6045; }
+  color: #EA6045;
+  letter-spacing: 1px; }
+
+h1, h2, h3, h4, h5 {
+  color: #2f3440; }
 
 nav {
   padding-top: 55px;
-  display: block;
-  width: 220px;
-  background: transparent; }
+  display: inline-block;
+  min-width: 220px;
+  width: 13.75rem;
+  background: transparent;
+  float: left;
+  margin-right: 7.321vw; }
   nav #logo {
     height: 150px;
     width: 150px;
@@ -72,44 +80,120 @@ nav {
     display: block;
     margin-left: 70px;
     width: 150px;
-    color: #2f3440; }
+    color: #2f3440;
+    -webkit-transition: color 0.1s;
+    -moz-transition: color 0.1s;
+    transition: color 0.1s; }
   nav li {
+    background-color: transparent;
     width: 220px;
     height: 110px;
     max-height: 110px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    -webkit-transition: background-color 0.4s;
+    -moz-transition: background-color 0.4s;
+    transition: background-color 0.4s; }
   nav li:hover {
-    -webkit-transition: background-color 1s ease-out;
-    -moz-transition: background-color 1s ease-out;
-    transition: background-color 1s ease-out;
     background-color: #3A4C5B; }
     nav li:hover a {
-      -webkit-transition: color 0.5s ease-out;
-      -moz-transition: color 0.5s ease-out;
-      transition: color 0.5s ease-out;
+      color: white; }
+    nav li:hover h4 {
+      color: white; }
+    nav li:hover h3 {
       color: white; }
   nav h4 {
     padding-top: 0.625rem;
-    padding-bottom: 1.25rem;
+    padding-bottom: 1.125rem;
     font-size: 0.875rem;
     font-family: "Montserrat", sans-serif; }
   nav h3 {
+    color: #3A4C5B;
     text-transform: uppercase;
+    position: relative;
     font-size: 1.125rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    padding-bottom: 0.625rem; }
+    padding-bottom: 0.5rem; }
   nav p {
     font-size: 0.75rem;
     line-height: 1.125rem;
     font-family: "Source Code Pro", monospace;
     padding-bottom: 0.625rem; }
 
-section#resume h1#name {
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 5.25rem;
-  color: #2f3440; }
+section#resume {
+  position: relative;
+  padding-top: 134px;
+  float: left;
+  display: inline-block;
+  min-width: 43.75rem;
+  max-width: calc(90% - 220px);
+  margin-left: none; }
+  section#resume h1#name {
+    top: 134px;
+    right: 0;
+    position: absolute;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 5.25rem;
+    color: #2f3440; }
+  section#resume .body_item {
+    position: relative;
+    top: 8.3125rem;
+    margin-bottom: 2.5rem; }
+    section#resume .body_item .right_col {
+      margin-top: -1.375rem;
+      margin-left: 18rem;
+      margin-bottom: 1rem; }
+    section#resume .body_item ul {
+      line-height: 1.625rem;
+      font-family: "Cardo", serif; }
+    section#resume .body_item h3 {
+      max-width: 10.875rem;
+      position: relative;
+      left: 0; }
+    section#resume .body_item h3:after {
+      height: 1px;
+      content: "";
+      position: absolute;
+      display: block;
+      left: -2px;
+      bottom: 1.5rem;
+      width: 97%;
+      background-color: #EA6045; }
+    section#resume .body_item h3, section#resume .body_item h4 {
+      font-size: 1.125rem;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      color: #3A4C5B; }
+    section#resume .body_item h4 {
+      line-height: 1.625rem; }
+    section#resume .body_item h4 + ul {
+      margin-bottom: 1rem; }
+    section#resume .body_item p {
+      font-family: "Cardo", serif;
+      font-style: italic;
+      line-height: 1.625rem; }
+    section#resume .body_item #obsessions_list {
+      font-size: 0.875rem;
+      font-family: "Source Code Pro", monospace;
+      text-align: center;
+      display: inline-block;
+      align-content: left; }
+      section#resume .body_item #obsessions_list li {
+        display: inline-block; }
+      section#resume .body_item #obsessions_list li:after {
+        content: "\00a0\00a0|\00a0"; }
+      section#resume .body_item #obsessions_list li:last-child:after {
+        content: ""; }
+
+#relevant_experience h3:after {
+  bottom: 2.5rem !important; }
+
+@media (max-width 1080px) {
+  #name {
+    top: 20px; } }
 
 /*# sourceMappingURL=style.css.map */
