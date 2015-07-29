@@ -8,6 +8,10 @@ $mont-stack : "Montserrat", sans-serif;
 $card-stack : "Hoefler Text", serif;
 $source-stack : "Source Code Pro", monospace;
 
+* {
+	@include box-sizing( border-box );
+}
+
 a {
 	text-decoration : none;
 }

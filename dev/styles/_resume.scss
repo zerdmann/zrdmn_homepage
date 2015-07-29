@@ -13,13 +13,11 @@ section#resume {
 	h1#name {
 		text-shadow: 1px 2px $ltblue;
 		//top:134px;
-		right:0;
 		position :absolute;
 		display: inline-block;
 		text-transform: uppercase;
 		font-family: $mont-stack;
 		font-weight: bold;
-		font-size: rem(84);
 		color : $dkblue;
 	}
 
@@ -29,7 +27,6 @@ section#resume {
 		margin-bottom: rem(40);
 
 		.right_col{
-			margin-top: rem(-22);
 			margin-bottom: 1rem;
 		}
 
