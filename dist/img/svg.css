@@ -1,0 +1,23 @@
+#logo:hover{
+	fill:red;
+	transform: translate(10px, 10px);
+}
+
+
+
+path:hover {
+	fill:green;
+}
+
+#lower_ltblue, #upper_ltblue {
+	fill : #3f5666;
+}
+
+#lower_dkblue, #upper_dkblue {
+	fill : #23f440;
+}
+
+#upper_red, #lower_red {
+	fill : #ea6045;
+}
+

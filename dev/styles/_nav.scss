@@ -1,25 +1,23 @@
-@import "nav-breakpoints";
-
 nav {
-	padding-top : 55px;
+	//padding-top : 55px;
 	display : inline-block;
-	min-width : 220px;
-	width: rem(220px);
-	background : transparent;
+	//min-width : 220px;
+	//width: rem(220px);
+	//background : transparent;
 	float: left;
-	margin-right: 7.321vw;
+	//margin-right: 7.321vw;
 
-	#logo {
+	.logo {
 	@include size(150px);
-
-	background-image: url("../img/logo.png");
+	//margin-left: 70px;
+	background-image: url("../img/logo_svg.svg");
 	background-size: 150px 150px;
 	margin-bottom: 20px;
 	}
 
 	a {
-		display: block;
-		margin-left: 70px;
+		//display: block;
+		//margin-left: 70px;
 		width: 150px;
 		color: $dkblue;
 		@include transition( color .1s);
@@ -28,7 +26,7 @@ nav {
 
 	li {
 		background-color: transparent;;
-		width: 220px;
+		//width: 220px;
 		height: 110px;
 		max-height: 110px;	
 		margin-bottom: 20px;
@@ -38,15 +36,15 @@ nav {
 	li:hover {
 				background-color: $ltblue;
 				a{
-					color: white;
+					color: lighten($cream, 30%);
 				}
 
 				h4 {
-					color:white;
+					color:lighten($ltblue, 12%);
 				}
 
 				h3{
-					color:white;
+					color:lighten($ltblue, 10%);
 				}
 
 
@@ -81,3 +79,5 @@ nav {
 
 	}
 }
+
+@import "nav-breakpoints";

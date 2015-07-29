@@ -1,7 +1,40 @@
+@media all and (min-width:1081px){
+	section#resume {
+		padding-top:130px;
+		min-width : rem(700px);
+		max-width: calc(90% - 220px);
 
-@media(max-width 1080px){
-	#name{
-		top:20px;
+	}
+	.body_item{
+		top : rem(49px + 84);
+
+	}
+
+	.right_col{
+		margin-left: 18rem;
+	}
+}
+
+
+@media all and (max-width:1080px) {
+	section#resume {
+		padding-top:44px;
+		min-width: 200px;
+		max-width: calc(92% - 220px);
+	}
+
+	h1#name {
+		max-width: rem(700px);
+		left:-5px;
+
+	}
+	.body_item {
+		top : rem(49px + 169);
+	}
+
+	.right_col{
+		margin-left: 12rem;
 	}
 
 }
+

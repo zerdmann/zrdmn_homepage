@@ -4,7 +4,6 @@ $card_line : rem(26);
 
 section#resume {
 	position: relative;
-	padding-top :134px;
 	float: left;
 	display : inline-block;
 	min-width : rem(700px);
@@ -12,7 +11,8 @@ section#resume {
 	margin-left:none;
 
 	h1#name {
-		top:134px;
+		text-shadow: 1px 2px $ltblue;
+		//top:134px;
 		right:0;
 		position :absolute;
 		display: inline-block;
@@ -26,12 +26,10 @@ section#resume {
 
 	.body_item {
 		position : relative;
-		top : rem(49px + 84);
 		margin-bottom: rem(40);
 
 		.right_col{
 			margin-top: rem(-22);
-			margin-left: 18rem;
 			margin-bottom: 1rem;
 		}
 
@@ -78,6 +76,7 @@ section#resume {
 			font-family: $card-stack;
 			font-style: italic;
 			line-height: $card_line;
+			font-weight: lighter;
 		}
 
 		#obsessions_list {

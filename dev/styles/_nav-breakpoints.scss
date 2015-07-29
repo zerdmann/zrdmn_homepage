@@ -1,5 +1,80 @@
-@media screen and (max-width:  1080px) {
+@media screen and (min-width : 1081px) {
 	nav {
+		margin-right: 7.321vw;
+		min-width: 220px;
+		width: 220px;
+		background : transparent;
+		padding-top: 55px;
+
+		a, .logo{
+			margin-left: 70px;
+			display : block;
+		}
+
+		li{
+			width:220px;
+		}
 	}
+
+
+
+}
+
+@media screen and (min-width : 769px ) and (max-width:  1080px) {
+	nav{
+		padding-top:55px;
+		background:transparent;
+		margin-right: 5vw;
+		min-width: 180px;
+		width: 180px;
+
+		a, .logo{
+			margin-left: 30px;
+			display: block;
+		}
+
+		li{
+			width:180px;
+		}
+	}
+
+
+	
+
+}
+
+@media screen and (max-width: 768px){
+	nav {
+		display: block;
+		float:none;
+		top: 0;
+		width: 100%;
+		height: 50px;
+		padding-top: 0;
+		margin-right:0;
+		background: $red;
+
+		  li h4, p{
+		display:none;
+
+	}
+	}
+
+	ul{
+		width:100%;
+	}
+
+	.logo {
+		display: none;
+	}
+
+	nav li{
+		height: 50px;
+		width:32%;
+		display:inline-block;
+		text-align: center;
+		vertical-align: bottom;
+	}
+
 
 }

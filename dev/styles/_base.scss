@@ -5,24 +5,38 @@ $cream : #F3E3BF;
 $yellow : #F5B94C;
 
 $mont-stack : "Montserrat", sans-serif;
-$card-stack : "Cardo", serif;
+$card-stack : "Hoefler Text", serif;
 $source-stack : "Source Code Pro", monospace;
 
 a {
 	text-decoration : none;
 }
 
+
+
 p a, .link {
+	font-style: normal;
 	text-transform: lowercase;
 	font-family : $card-stack;
 	font-variant: small-caps;
-	font-size : 1.25em;
+	font-size : 1.2rem;
 	color : $red;
-	letter-spacing : 1px;
+	letter-spacing : 1.2px;
+	padding-left : 3px;
+	padding-right : 2px;
+	display:inline-block;
+	position: relative;
+
 }
 
-p a:hover, .link:hover {
-	
+p a:before, .link:before {
+		width:100%;
+		position: absolute;
+		background : $cream;
+}
+
+p a:hover:before, .link:hover {
+
 }
 
 h1, h2, h3, h4, h5 {
