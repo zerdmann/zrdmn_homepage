@@ -89,6 +89,7 @@ section#resume {
 			
 
 			li:after {
+					color: lighten($ltblue,40%);
 					content : "\00a0\00a0|\00a0";
 			}
 

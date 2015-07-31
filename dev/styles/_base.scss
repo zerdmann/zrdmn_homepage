@@ -4,12 +4,46 @@ $ltblue : #3A4C5B;
 $cream : #F3E3BF;
 $yellow : #F5B94C;
 
+@font-face {
+	font-family : Montserrat;
+	src : url(../assets/Montserrat-Regular.ttf);
+	font-weight: normal;
+}
+@font-face {
+	font-family : Montserrat;
+	src : url(../assets/Montserrat-Bold.ttf);
+	font-weight : bold;
+}
+
+@font-face {
+	font-family : Hoefler Text;
+	src : url(../assets/hoefler-regular.ttf) format('truetype');
+	font-style : normal;
+}
+@font-face {
+	font-family : Hoefler Text;
+	src : url(../assets/hoefler-italic.ttf);
+	font-style : italic;
+}
+@font-face {
+	font-family : Source Code Pro;
+	src : url(../assets/SourceCodePro-Regular.otf);
+	font-weight:normal;
+}
+
 $mont-stack : "Montserrat", sans-serif;
 $card-stack : "Hoefler Text", serif;
 $source-stack : "Source Code Pro", monospace;
 
+::selection {
+	background-color: $red;
+	color: lighten($yellow, 30%);
+	opacity:1;
+
+}
+
 * {
-	@include box-sizing( border-box );
+	box-sizing: border-box ;
 }
 
 a {
@@ -30,16 +64,28 @@ p a, .link {
 	padding-right : 2px;
 	display:inline-block;
 	position: relative;
+	@include transition (color .2s ease-in-out );
 
 }
 
 p a:before, .link:before {
-		width:100%;
+		content:' ';
+		display: inline-block;
+		height:1.5rem;
+		width:0;
 		position: absolute;
-		background : $cream;
+		left:0px;
+		background : lighten($cream,10%);
+		z-index: -10;
+		@include transition ( width .3s ease-in-out );
 }
 
-p a:hover:before, .link:hover {
+p a:hover, .link:hover {
+	color: darken($red,25%);
+}
+
+p a:hover:before, .link:hover:before {
+	width:100%;
 
 }
 

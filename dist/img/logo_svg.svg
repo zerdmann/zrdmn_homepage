@@ -1,0 +1,41 @@
+<svg viewBox="0 0 335 334" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><?xml-stylesheet type="text/css" href="svg.css" ?><style><![CDATA[
+
+ 	* {
+ 	transition: all .01s ease-in;
+ 	}
+	#lower_ltblue, #upper_ltblue {
+		fill : #3f5666;
+	}
+
+	#lower_dkblue, #upper_dkblue {
+		fill : #2f3440;
+	}	
+
+	#upper_red, #lower_red {
+		fill : #ea6045;
+	}
+
+	#logo:hover #lower_ltblue {
+		transform:translate(10px,10px);
+	}
+
+	#logo:hover #upper_ltblue {
+		transform:translate(-10px,-10px);
+	}
+
+	#logo:hover #upper_red{
+		transform:translateY(-20px);
+	}
+
+	#logo:hover #lower_dkblue {
+		transform:translateY(20px);
+	}
+
+	#logo:hover #upper_dkblue {
+	 transform:translate(-2px,-10px)
+	}
+
+	#logo:hover #lower_red {
+		transform:translate(2px,10px)
+	}
+ 	]]></style><a xlink:href="http://zrd.mn" target="_top"><g id="logo" fill-rule="nonzero"><path id="lower_ltblue" d="M335 55.5V334l-107.5-80.17L334.41 56.59l.59-1.09z"/><g id="center_gold" fill="#f8ca4d"><path d="M335 0v55.5l-1.04.86-18.13-9.11L335 0z"/><path d="M333.96 56.36L0 334l13.17-38.17L315.83 47.25l18.13 9.11z"/></g><g id="center_cream" fill="#f5e5c0"><path d="M335 0l-19.17 47.25L13.17 295.83 0 279 335 0z"/><path d="M0 279l13.17 16.83L0 334v-55z"/></g><path id="upper_dkblue" d="M335 0L0 279l69.5-178.5L335 0z"/><path id="upper_red" d="M335 0L69.5 100.5 0 0h335z"/><path id="lower_dkblue" d="M335 334H0l227.5-80.17L335 334z"/><path id="lower_red" d="M334.41 56.59L227.5 253.83 0 334 333.96 56.36l.45.23z"/><path id="upper_ltblue" d="M0 0l69.5 100.5L0 279V0z"/></g></a></svg>
