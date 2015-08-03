@@ -61,8 +61,10 @@
 	}
 
 	nav ul{
-		display:flex;
-		flex-direction:row;
+		@include display(flex);
+		@include flex-direction(row);
+		@include align-items( stretch );
+		@include justify-content( flex-start);
 		padding:0;
 		width:100%;
 	}
@@ -80,7 +82,7 @@
 		display:inline-block;
 		text-align: center;
 		vertical-align: bottom;
-		flex-grow:1;
+		@include flex-grow(1);
 	}
 
 	nav li:hover h3{

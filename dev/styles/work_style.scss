@@ -2,3 +2,46 @@
 @import "reset";
 @import "base";
 @import "nav";
+
+.wrapper{
+	float:left;
+	width: calc(100% - 220px - 7.321vw);
+	//background: green;
+	height:100%;
+}
+
+.work {
+	position:relative;
+	float:left;
+	height: 280px;
+	max-width: 960px;
+	min-width : rem(700px);
+	width:100%;
+	display: block;
+	margin-top:55px;
+
+}
+
+
+.work:hover {
+
+}
+
+#koe{
+	background: url("/img/koe.png");
+
+}
+
+#koe:hover {
+	background: url("/img/koe_hover.png");
+
+}
+
+#other{
+
+	background: url("/img/painting.png");
+}
+
+#other:hover {
+	background: url("/img/painting_hover.png");
+}
