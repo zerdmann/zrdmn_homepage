@@ -15,7 +15,8 @@ module.exports = function(grunt) {
       dev : {
         files : {
           "dist/styles/style.css" : "dev/styles/style.scss",
-          "dist/styles/work_style.css" : "dev/styles/work_style.scss"
+          "dist/styles/work_style.css" : "dev/styles/work_style.scss",
+          "dist/styles/work_page.css" : "dev/styles/work_page.scss"
         }
       }
     },
@@ -47,7 +48,12 @@ module.exports = function(grunt) {
         },
         files : {
           "dist/index.html" : "dev/index.html",
-          "dist/work/index.html" : "dev/work/index.html"
+          "dist/work/index.html" : "dev/work/index.html",
+          "dist/work/penzeys/index.html" : "dev/work/penzeys/index.html",
+          "dist/work/wedding/index.html" : "dev/work/wedding/index.html",
+          "dist/work/koe/index.html" : "dev/work/koe/index.html",
+          "dist/work/johnmarla/index.html" : "dev/work/johnmarla/index.html",
+          "dist/work/other/index.html" : "dev/work/other/index.html",
         },
       },
       commit: {

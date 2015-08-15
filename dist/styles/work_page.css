@@ -290,89 +290,24 @@ nav {
 @media screen and (max-width: 522px) {
   nav li {
     padding-top: 2.7vw; } }
-.wrapper {
-  float: left;
-  width: calc(95% - 220px - 7.321vw);
-  height: 100%; }
+#wrapper {
+  float: right;
+  width: calc(100% - 220px - 7.321vw);
+  height: 100%;
+  padding-bottom: 3rem; }
 
-.work {
-  position: relative;
-  float: left;
-  height: 280px;
-  max-width: 960px;
-  width: 100%;
-  display: block;
-  margin-top: 55px;
-  z-index: 1;
-  background-position: 30% 10%; }
-  .work:after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    opacity: 1;
-    display: block;
-    width: inherit;
-    height: inherit;
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out;
-    background-position: 30% 10%; }
-  .work .content {
-    position: relative;
-    margin-right: 2rem;
-    height: 78%;
-    margin: 2rem;
-    z-index: 10;
-    padding: 1rem;
-    background: rgba(240, 240, 240, 0.7);
-    -webkit-transition: background 0.5s ease-in-out;
-    -moz-transition: background 0.5s ease-in-out;
-    transition: background 0.5s ease-in-out; }
-    .work .content h3 {
-      font-size: 1.375rem;
-      text-transform: uppercase;
-      font-family: "Montserrat", sans-serif;
-      font-weight: bold;
-      color: #2f3440; }
-    .work .content p {
-      font-family: "Hoefler Text", serif;
-      font-size: 1.25rem;
-      line-height: 1.625rem;
-      font-weight: lighter;
-      margin-top: 2rem;
-      margin-left: 1rem; }
+section#header {
+  height: 480px;
+  background: green; }
 
-.work:hover:after {
-  opacity: 0; }
+section#body_copy {
+  width: 60%;
+  margin: 0 auto; }
+  section#body_copy p {
+    font-family: "Hoefler Text", serif;
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+    font-weight: lighter;
+    margin-top: 2rem; }
 
-.work:hover .content {
-  background: rgba(240, 240, 255, 0.9); }
-
-#koe {
-  background-image: url("/img/koe_hover.png"); }
-
-.work#koe::after {
-  background-image: url("/img/koe.png"); }
-
-#johnmarla {
-  background-image: url("/img/johnmarla_hover.png"); }
-  #johnmarla::after {
-    background-image: url("/img/johnmarla.png"); }
-
-#wedding {
-  background-image: url("/img/wedding_hover.png"); }
-  #wedding::after {
-    background-image: url("/img/wedding.png"); }
-
-#penzeys {
-  background-image: url("/img/penzeys_hover.png"); }
-  #penzeys::after {
-    background-image: url("/img/penzeys.png"); }
-
-#other {
-  background-image: url("/img/painting_hover.png"); }
-  #other::after {
-    background-image: url("/img/painting.png"); }
-
-/*# sourceMappingURL=work_style.css.map */
+/*# sourceMappingURL=work_page.css.map */

@@ -76,8 +76,12 @@ table {
 * {
   box-sizing: border-box; }
 
+html {
+  overflow-x: hidden; }
+
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #222; }
 
 p a, .link {
   font-style: normal;
@@ -102,7 +106,7 @@ p a:before, .link:before {
   width: 0;
   position: absolute;
   left: 0px;
-  background: #fbf6ea;
+  background: #f7ecd4;
   z-index: -10;
   -webkit-transition: width 0.3s ease-in-out;
   -moz-transition: width 0.3s ease-in-out;
@@ -140,13 +144,13 @@ nav {
     -webkit-transition: background-color 0.4s;
     -moz-transition: background-color 0.4s;
     transition: background-color 0.4s; }
-  nav li:hover {
+  nav li:hover:not(.disabled) {
     background-color: #3A4C5B; }
-    nav li:hover a {
+    nav li:hover:not(.disabled) a {
       color: white; }
-    nav li:hover h4 {
+    nav li:hover:not(.disabled) h4 {
       color: #526b80; }
-    nav li:hover h3 {
+    nav li:hover:not(.disabled) h3 {
       color: #4e667a; }
   nav h4 {
     padding-top: 0.625rem;
@@ -166,6 +170,25 @@ nav {
     line-height: 1.125rem;
     font-family: "Source Code Pro", monospace;
     padding-bottom: 0.625rem; }
+
+.disabled {
+  opacity: .9;
+  background-color: #444;
+  position: relative; }
+  .disabled a, .disabled p, .disabled h3, .disabled h4 {
+    color: #35363a; }
+  .disabled:after {
+    color: #ddd;
+    content: "COMING";
+    position: absolute;
+    top: 40%;
+    left: 2rem;
+    opacity: 1;
+    display: block;
+    width: inherit;
+    height: inherit;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.875rem; }
 
 @media screen and (min-width: 1081px) {
   nav {
@@ -259,7 +282,8 @@ nav {
     -ms-flex-positive: 1; }
 
   nav li:hover h3 {
-    text-shadow: -1px -1px #F3E3BF; }
+    color: #F3E3BF;
+    text-shadow: 1px 1px #F5B94C; }
 
   nav h3 {
     font-size: 5vw; } }
@@ -270,8 +294,6 @@ section#resume {
   position: relative;
   float: left;
   display: inline-block;
-  min-width: 43.75rem;
-  max-width: calc(90% - 220px);
   margin-left: none; }
   section#resume h1#name {
     text-shadow: 1px 2px #3A4C5B;
@@ -285,7 +307,8 @@ section#resume {
     position: relative;
     margin-bottom: 2.5rem; }
     section#resume .body_item .right_col {
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      margin-right: 1rem; }
     section#resume .body_item ul {
       line-height: 1.625rem;
       font-family: "Hoefler Text", serif; }
@@ -310,13 +333,14 @@ section#resume {
       color: #3A4C5B; }
     section#resume .body_item h4 {
       line-height: 1.625rem; }
-    section#resume .body_item h4 + ul {
+    section#resume .body_item h4 + p {
       margin-bottom: 1rem; }
     section#resume .body_item p {
       font-family: "Hoefler Text", serif;
-      font-style: italic;
       line-height: 1.625rem;
       font-weight: lighter; }
+    section#resume .body_item#colophon p {
+      font-style: italic; }
     section#resume .body_item #obsessions_list {
       font-size: 0.875rem;
       font-family: "Source Code Pro", monospace;
@@ -338,7 +362,7 @@ section#resume {
   section#resume {
     padding-top: 130px;
     min-width: 43.75rem;
-    max-width: calc(90% - 220px); }
+    max-width: 69%; }
 
   .body_item {
     top: 8.3125rem; }
@@ -359,6 +383,7 @@ section#resume {
 
   h1#name {
     font-size: 5.25rem;
+    width: inherit;
     max-width: 43.75rem;
     left: -5px;
     right: 0; }
@@ -391,8 +416,8 @@ section#resume {
     width: 90vw; } }
 @media screen and (max-width: 522px) {
   section#resume h1#name {
-    font-size: 4.3rem;
-    max-width: 37.5rem;
+    font-size: 3.5rem;
+    max-width: 100vw;
     padding-left: .75rem; }
 
   .body_item {

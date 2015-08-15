@@ -5,7 +5,7 @@
 
 .wrapper{
 	float:left;
-	width: calc(100% - 220px - 7.321vw);
+	width: calc(95% - 220px - 7.321vw);
 	//background: green;
 	height:100%;
 }
@@ -15,33 +15,96 @@
 	float:left;
 	height: 280px;
 	max-width: 960px;
-	min-width : rem(700px);
+	//min-width : rem(700px);
 	width:100%;
 	display: block;
 	margin-top:55px;
+	z-index: 1;
+	background-position: 30% 10%;
+
+	&:after{
+		content:" ";
+		position:absolute;
+		top:0;
+		z-index:-1;
+		opacity:1;
+		display:block;
+		width:inherit;
+		height:inherit;
+		@include transition(opacity .5s ease-in-out);
+		background-position: 30% 10%;
+
+
+	}
+
+	.content {
+		position: relative;
+		margin-right:2rem;
+		height: 78%;
+		margin:2rem;
+		z-index: 10;
+		padding:1rem;
+		background : rgba(240,240,240,.7);
+		@include transition(background .5s ease-in-out);
+
+		h3{
+			font-size: rem(22);
+			text-transform: uppercase;
+			font-family: $mont-stack;
+			font-weight: bold;
+			color: $dkblue;
+		}
+
+		p {
+			font-family: $card-stack;
+			//font-style: italic;
+			font-size: rem(20);
+			line-height: rem(26);
+			font-weight: lighter;
+			margin-top: 2rem;
+			margin-left:1rem;
+
+		}
+	}
 
 }
 
+.work:hover:after{
+	opacity:0;
+}
 
-.work:hover {
-
+.work:hover .content {
+	background : rgba(240,240,255, 0.9);
 }
 
 #koe{
-	background: url("/img/koe.png");
+	background-image: url("/img/koe_hover.png");
 
 }
 
-#koe:hover {
-	background: url("/img/koe_hover.png");
+.work#koe::after {
+	background-image: url("/img/koe.png");
 
+}
+
+#johnmarla {
+	background-image: url("/img/johnmarla_hover.png");
+	&::after { background-image :url("/img/johnmarla.png");}
+}
+
+#wedding {
+	background-image: url("/img/wedding_hover.png");
+	&::after { background-image :url("/img/wedding.png");}
+}
+
+#penzeys {
+	background-image: url("/img/penzeys_hover.png");
+	&::after { background-image : url("/img/penzeys.png");}
 }
 
 #other{
 
-	background: url("/img/painting.png");
-}
-
-#other:hover {
-	background: url("/img/painting_hover.png");
+	background-image: url("/img/painting_hover.png");
+  &::after {
+	background-image: url("/img/painting.png"); }
 }

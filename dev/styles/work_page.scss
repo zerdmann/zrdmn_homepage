@@ -1,0 +1,32 @@
+@import "bourbon";
+@import "reset";
+@import "base";
+@import "nav";
+
+#wrapper{
+	float:right;
+	width: calc(100% - 220px - 7.321vw);
+	//background: green;
+	height:100%;
+	padding-bottom:3rem;
+
+}
+
+section#header {
+	height:480px;
+	background:green;
+}
+
+section#body_copy{
+	width:60%;
+	margin: 0 auto;
+
+	p {
+			font-family: $card-stack;
+			font-size: rem(24);
+			line-height: rem(34);
+			font-weight: lighter;
+			margin-top:2rem;
+
+	}
+}

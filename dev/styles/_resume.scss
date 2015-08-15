@@ -6,8 +6,8 @@ section#resume {
 	position: relative;
 	float: left;
 	display : inline-block;
-	min-width : rem(700px);
-	max-width: calc(90% - 220px);
+	//min-width : rem(700px);
+	//max-width: calc(90% - 220px);
 	margin-left:none;
 
 	h1#name {
@@ -28,6 +28,7 @@ section#resume {
 
 		.right_col{
 			margin-bottom: 1rem;
+			margin-right:1rem;
 		}
 
 		ul {
@@ -65,15 +66,19 @@ section#resume {
 			//margin-bottom: .25rem;
 		}
 
-		h4+ul {
+		h4+p {
 			margin-bottom: 1rem;
 		}
 
 		p { 
 			font-family: $card-stack;
-			font-style: italic;
+			//font-style: italic;
 			line-height: $card_line;
 			font-weight: lighter;
+		}
+
+		&#colophon p {
+			font-style: italic;
 		}
 
 		#obsessions_list {

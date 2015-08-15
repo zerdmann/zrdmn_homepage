@@ -33,7 +33,7 @@ nav {
 		@include transition( background-color .4s);
 
 	}
-	li:hover {
+	li:hover:not(.disabled) {
 				background-color: $ltblue;
 				a{
 					color: lighten($cream, 30%);
@@ -79,5 +79,29 @@ nav {
 
 	}
 }
+
+	.disabled {
+		opacity: .9;
+		background-color: #444;
+		position:relative;
+
+		a, p, h3, h4{
+			color: desaturate($dkblue, 10%);
+		}
+
+		&:after {
+			color:#ddd;
+			content:"COMING";
+			position:absolute;
+			top:40%;
+			left: 2rem;
+			opacity:1;
+			display:block;
+			width:inherit;
+			height:inherit;
+			font-family: $mont-stack;
+			font-size: rem(30);
+		}
+	}
 
 @import "nav-breakpoints";

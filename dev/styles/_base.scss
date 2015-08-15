@@ -3,6 +3,7 @@ $dkblue : #2f3440;
 $ltblue : #3A4C5B;
 $cream : #F3E3BF;
 $yellow : #F5B94C;
+$black: #222;
 
 @font-face {
 	font-family : Montserrat;
@@ -46,8 +47,14 @@ $source-stack : "Source Code Pro", monospace;
 	box-sizing: border-box ;
 }
 
+html {
+	overflow-x:hidden;
+
+}
+
 a {
 	text-decoration : none;
+	color: $black;
 }
 
 
@@ -75,7 +82,7 @@ p a:before, .link:before {
 		width:0;
 		position: absolute;
 		left:0px;
-		background : lighten($cream,10%);
+		background : lighten($cream,5%);
 		z-index: -10;
 		@include transition ( width .3s ease-in-out );
 }

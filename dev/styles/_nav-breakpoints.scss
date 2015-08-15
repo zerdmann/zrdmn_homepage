@@ -86,7 +86,8 @@
 	}
 
 	nav li:hover h3{
-		text-shadow: -1px -1px $cream;
+		color: $cream;
+		text-shadow: 1px 1px $yellow;
 	}
 
 	nav h3 {
