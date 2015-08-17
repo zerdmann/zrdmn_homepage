@@ -6,27 +6,117 @@
 #wrapper{
 	float:right;
 	width: calc(100% - 220px - 7.321vw);
+	max-width: 1200px;
 	//background: green;
 	height:100%;
 	padding-bottom:3rem;
 
 }
 
-section#header {
+section.header {
 	height:480px;
-	background:green;
+	position:relative;
+    background-size: cover;
+
+
+	h3{
+		position:absolute;
+	}
 }
 
+#penzeys{
+	background-image: url("/img/love_bg.png");
+	background-position:50% 30%;
+
+}
+
+
+
+#koe{
+
+	background-image: url("/img/koe_bg.png");
+
+	h3{
+		font-family: "Abraham Lincoln";
+		font-size: 5.5rem;
+		bottom: 5%;
+		left:2%;
+		color: $yellow;
+	}
+}
+
+#wedding{
+	background-image: url("/img/wedding_bg.png");
+
+	h3{
+		font-family: $mont-stack;
+		font-size: 2rem;
+		bottom:rem(400);
+		left:7%;
+		color: $dkblue;
+	}
+}
+
+#johnmarla{
+	background-image: url("/img/jm_wedding.jpg");
+
+	h3{
+		font-family: $mont-stack;
+		font-size: 2rem;
+		bottom:rem(400);
+		left:7%;
+		color: $dkblue;
+	}
+}
+
+
+#other{
+	background-image: url("/img/other_bg.png");
+	background-position: 50% 50%;
+
+	h3{
+		font-family: $mont-stack;
+		font-size: 7rem;
+		bottom:rem(200);
+		left:40%;
+		color: rgb(250,250,250);
+		text-transform: uppercase;
+		letter-spacing: -2px;
+		font-kerning: normal;
+		text-shadow: -2px 1px 2px $red;
+	}
+}
 section#body_copy{
-	width:60%;
+	width:75%;
 	margin: 0 auto;
 
 	p {
 			font-family: $card-stack;
-			font-size: rem(24);
-			line-height: rem(34);
+			font-size: rem(22);
+			line-height: rem(30);
 			font-weight: lighter;
 			margin-top:2rem;
 
 	}
+
+
+	aside {
+		margin:2rem;
+		float: right;
+		width:100%;
+		
+		img{
+			width:100%;
+		}
+		span{
+			display:block;
+			width:85%;
+			margin: auto;
+			font-size: .75rem;
+			 text-align: center;
+			 font-family: $source-stack;
+			}
+
+	}
 }
+

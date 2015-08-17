@@ -48,6 +48,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.hidden {
+  display: none;
+  visibility: hidden; }
+
 @font-face {
   font-family: Montserrat;
   src: url(../assets/Montserrat-Regular.ttf);
@@ -83,12 +87,13 @@ a {
   text-decoration: none;
   color: #222; }
 
+em {
+  font-style: italic;
+  word-spacing: 2px; }
+
 p a, .link {
   font-style: normal;
-  text-transform: lowercase;
   font-family: "Hoefler Text", serif;
-  font-variant: small-caps;
-  font-size: 1.2rem;
   color: #EA6045;
   letter-spacing: 1.2px;
   padding-left: 3px;
@@ -102,18 +107,19 @@ p a, .link {
 p a:before, .link:before {
   content: ' ';
   display: inline-block;
-  height: 1.5rem;
+  height: 1.8rem;
   width: 0;
   position: absolute;
+  top: -2px;
   left: 0px;
-  background: #f7ecd4;
+  background: #3A4C5B;
   z-index: -10;
   -webkit-transition: width 0.3s ease-in-out;
   -moz-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out; }
 
 p a:hover, .link:hover {
-  color: #9e2912; }
+  color: whitesmoke; }
 
 p a:hover:before, .link:hover:before {
   width: 100%; }
@@ -293,7 +299,8 @@ nav {
 .wrapper {
   float: left;
   width: calc(95% - 220px - 7.321vw);
-  height: 100%; }
+  height: 100%;
+  margin-bottom: 3rem; }
 
 .work {
   position: relative;
@@ -324,21 +331,21 @@ nav {
     height: 78%;
     margin: 2rem;
     z-index: 10;
-    padding: 1rem;
+    padding: 1.5rem;
     background: rgba(240, 240, 240, 0.7);
     -webkit-transition: background 0.5s ease-in-out;
     -moz-transition: background 0.5s ease-in-out;
     transition: background 0.5s ease-in-out; }
     .work .content h3 {
-      font-size: 1.375rem;
+      font-size: 1.5rem;
       text-transform: uppercase;
       font-family: "Montserrat", sans-serif;
       font-weight: bold;
       color: #2f3440; }
     .work .content p {
       font-family: "Hoefler Text", serif;
-      font-size: 1.25rem;
-      line-height: 1.625rem;
+      font-size: 1.375rem;
+      line-height: 1.875rem;
       font-weight: lighter;
       margin-top: 2rem;
       margin-left: 1rem; }

@@ -8,6 +8,7 @@
 	width: calc(95% - 220px - 7.321vw);
 	//background: green;
 	height:100%;
+	margin-bottom:3rem;
 }
 
 .work {
@@ -43,12 +44,12 @@
 		height: 78%;
 		margin:2rem;
 		z-index: 10;
-		padding:1rem;
+		padding:1.5rem;
 		background : rgba(240,240,240,.7);
 		@include transition(background .5s ease-in-out);
 
 		h3{
-			font-size: rem(22);
+			font-size: rem(24);
 			text-transform: uppercase;
 			font-family: $mont-stack;
 			font-weight: bold;
@@ -58,8 +59,8 @@
 		p {
 			font-family: $card-stack;
 			//font-style: italic;
-			font-size: rem(20);
-			line-height: rem(26);
+			font-size: rem(22);
+			line-height: rem(30);
 			font-weight: lighter;
 			margin-top: 2rem;
 			margin-left:1rem;

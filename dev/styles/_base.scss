@@ -5,6 +5,11 @@ $cream : #F3E3BF;
 $yellow : #F5B94C;
 $black: #222;
 
+.hidden {
+	display:none;
+	visibility:hidden;
+}
+
 @font-face {
 	font-family : Montserrat;
 	src : url(../assets/Montserrat-Regular.ttf);
@@ -57,14 +62,17 @@ a {
 	color: $black;
 }
 
-
+em {
+	font-style: italic;
+	word-spacing: 2px;
+}
 
 p a, .link {
 	font-style: normal;
-	text-transform: lowercase;
+	//text-transform: lowercase;
 	font-family : $card-stack;
-	font-variant: small-caps;
-	font-size : 1.2rem;
+	//font-variant: small-caps;
+	//font-size : 1.2em;
 	color : $red;
 	letter-spacing : 1.2px;
 	padding-left : 3px;
@@ -78,17 +86,18 @@ p a, .link {
 p a:before, .link:before {
 		content:' ';
 		display: inline-block;
-		height:1.5rem;
+		height:1.8rem;
 		width:0;
 		position: absolute;
+		top:-2px;
 		left:0px;
-		background : lighten($cream,5%);
+		background : $ltblue;
 		z-index: -10;
 		@include transition ( width .3s ease-in-out );
 }
 
 p a:hover, .link:hover {
-	color: darken($red,25%);
+	color: rgb(245,245,245);
 }
 
 p a:hover:before, .link:hover:before {
@@ -99,3 +108,4 @@ p a:hover:before, .link:hover:before {
 h1, h2, h3, h4, h5 {
 	color : $dkblue;
 }
+

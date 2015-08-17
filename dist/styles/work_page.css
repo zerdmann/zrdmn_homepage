@@ -48,6 +48,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.hidden {
+  display: none;
+  visibility: hidden; }
+
 @font-face {
   font-family: Montserrat;
   src: url(../assets/Montserrat-Regular.ttf);
@@ -83,12 +87,13 @@ a {
   text-decoration: none;
   color: #222; }
 
+em {
+  font-style: italic;
+  word-spacing: 2px; }
+
 p a, .link {
   font-style: normal;
-  text-transform: lowercase;
   font-family: "Hoefler Text", serif;
-  font-variant: small-caps;
-  font-size: 1.2rem;
   color: #EA6045;
   letter-spacing: 1.2px;
   padding-left: 3px;
@@ -102,18 +107,19 @@ p a, .link {
 p a:before, .link:before {
   content: ' ';
   display: inline-block;
-  height: 1.5rem;
+  height: 1.8rem;
   width: 0;
   position: absolute;
+  top: -2px;
   left: 0px;
-  background: #f7ecd4;
+  background: #3A4C5B;
   z-index: -10;
   -webkit-transition: width 0.3s ease-in-out;
   -moz-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out; }
 
 p a:hover, .link:hover {
-  color: #9e2912; }
+  color: whitesmoke; }
 
 p a:hover:before, .link:hover:before {
   width: 100%; }
@@ -293,21 +299,83 @@ nav {
 #wrapper {
   float: right;
   width: calc(100% - 220px - 7.321vw);
+  max-width: 1200px;
   height: 100%;
   padding-bottom: 3rem; }
 
-section#header {
+section.header {
   height: 480px;
-  background: green; }
+  position: relative;
+  background-size: cover; }
+  section.header h3 {
+    position: absolute; }
+
+#penzeys {
+  background-image: url("/img/love_bg.png");
+  background-position: 50% 30%; }
+
+#koe {
+  background-image: url("/img/koe_bg.png"); }
+  #koe h3 {
+    font-family: "Abraham Lincoln";
+    font-size: 5.5rem;
+    bottom: 5%;
+    left: 2%;
+    color: #F5B94C; }
+
+#wedding {
+  background-image: url("/img/wedding_bg.png"); }
+  #wedding h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    bottom: 25rem;
+    left: 7%;
+    color: #2f3440; }
+
+#johnmarla {
+  background-image: url("/img/jm_wedding.jpg"); }
+  #johnmarla h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    bottom: 25rem;
+    left: 7%;
+    color: #2f3440; }
+
+#other {
+  background-image: url("/img/other_bg.png");
+  background-position: 50% 50%; }
+  #other h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 7rem;
+    bottom: 12.5rem;
+    left: 40%;
+    color: #fafafa;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    font-kerning: normal;
+    text-shadow: -2px 1px 2px #EA6045; }
 
 section#body_copy {
-  width: 60%;
+  width: 75%;
   margin: 0 auto; }
   section#body_copy p {
     font-family: "Hoefler Text", serif;
-    font-size: 1.5rem;
-    line-height: 2.125rem;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
     font-weight: lighter;
     margin-top: 2rem; }
+  section#body_copy aside {
+    margin: 2rem;
+    float: right;
+    width: 100%; }
+    section#body_copy aside img {
+      width: 100%; }
+    section#body_copy aside span {
+      display: block;
+      width: 85%;
+      margin: auto;
+      font-size: .75rem;
+      text-align: center;
+      font-family: "Source Code Pro", monospace; }
 
 /*# sourceMappingURL=work_page.css.map */

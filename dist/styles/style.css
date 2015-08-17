@@ -48,6 +48,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.hidden {
+  display: none;
+  visibility: hidden; }
+
 @font-face {
   font-family: Montserrat;
   src: url(../assets/Montserrat-Regular.ttf);
@@ -83,12 +87,13 @@ a {
   text-decoration: none;
   color: #222; }
 
+em {
+  font-style: italic;
+  word-spacing: 2px; }
+
 p a, .link {
   font-style: normal;
-  text-transform: lowercase;
   font-family: "Hoefler Text", serif;
-  font-variant: small-caps;
-  font-size: 1.2rem;
   color: #EA6045;
   letter-spacing: 1.2px;
   padding-left: 3px;
@@ -102,18 +107,19 @@ p a, .link {
 p a:before, .link:before {
   content: ' ';
   display: inline-block;
-  height: 1.5rem;
+  height: 1.8rem;
   width: 0;
   position: absolute;
+  top: -2px;
   left: 0px;
-  background: #f7ecd4;
+  background: #3A4C5B;
   z-index: -10;
   -webkit-transition: width 0.3s ease-in-out;
   -moz-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out; }
 
 p a:hover, .link:hover {
-  color: #9e2912; }
+  color: whitesmoke; }
 
 p a:hover:before, .link:hover:before {
   width: 100%; }
