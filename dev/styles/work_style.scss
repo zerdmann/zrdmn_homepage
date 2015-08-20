@@ -62,7 +62,7 @@
 			font-size: rem(22);
 			line-height: rem(30);
 			font-weight: lighter;
-			margin-top: 2rem;
+			margin-top: 1.5rem;
 			margin-left:1rem;
 
 		}
@@ -103,9 +103,9 @@
 	&::after { background-image : url("/img/penzeys.png");}
 }
 
-#other{
-
+#other {
 	background-image: url("/img/painting_hover.png");
   &::after {
 	background-image: url("/img/painting.png"); }
+
 }

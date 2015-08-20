@@ -32,7 +32,8 @@ section#resume {
 		}
 
 		ul {
-			line-height: $card_line;
+			line-height: rem(32);
+			font-size:rem(22);
 			font-family : $card-stack;
 		}
 
@@ -48,13 +49,13 @@ section#resume {
 		position: absolute;
 		display: block;
 		left: -2px;
-		bottom: rem(24px);
+		bottom: rem(28px);
 		width: 97%;
 		background-color: $red;
 	}
 
 	h3, h4  {
-			font-size: rem(18);
+			font-size: rem(24);
 			text-transform: uppercase;
 			font-family: $mont-stack;
 			font-weight: bold;
@@ -62,23 +63,27 @@ section#resume {
 		}
 
 		h4 {
-			line-height: rem(26);
+			line-height: rem(32);
+			position:relative;
+			top:-8px;
 			//margin-bottom: .25rem;
 		}
 
 		h4+p {
-			margin-bottom: 1rem;
+			margin-bottom: 2rem;
 		}
 
 		p { 
 			font-family: $card-stack;
 			//font-style: italic;
-			line-height: $card_line;
+			line-height: rem(32);
 			font-weight: lighter;
+			font-size: rem(22);
+
 		}
 
 		&#colophon p {
-			font-style: italic;
+			//font-style: italic;
 		}
 
 		#obsessions_list {
@@ -109,7 +114,7 @@ section#resume {
 }
 
 #relevant_experience h3:after{
-	bottom:rem(40) !important;
+	bottom:rem(52) !important;
 }
 
 

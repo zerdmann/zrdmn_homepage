@@ -48,6 +48,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+abbr {
+  text-transform: lowercase;
+  font-variant: small-caps; }
+
 .hidden {
   display: none;
   visibility: hidden; }
@@ -72,6 +76,10 @@ table {
   font-family: Source Code Pro;
   src: url(../assets/SourceCodePro-Regular.otf);
   font-weight: normal; }
+@font-face {
+  font-family: Abraham Lincoln;
+  src: url(../assets/AbrahamLincoln.ttf);
+  font-weight: normal; }
 ::selection {
   background-color: #EA6045;
   color: #fdf2dd;
@@ -91,13 +99,17 @@ em {
   font-style: italic;
   word-spacing: 2px; }
 
+p {
+  -webkit-font-feature-settings: "o-num";
+  -moz-font-feature-settings: "o-num";
+  -ms-font-feature-settings: "o-num";
+  font-feature-settings: "o-num"; }
+
 p a, .link {
   font-style: normal;
   font-family: "Hoefler Text", serif;
   color: #EA6045;
-  letter-spacing: 1.2px;
-  padding-left: 3px;
-  padding-right: 2px;
+  padding-right: 1px;
   display: inline-block;
   position: relative;
   -webkit-transition: color 0.2s ease-in-out;
@@ -111,8 +123,8 @@ p a:before, .link:before {
   width: 0;
   position: absolute;
   top: -2px;
-  left: 0px;
-  background: #3A4C5B;
+  left: -1px;
+  background: #EA6045;
   z-index: -10;
   -webkit-transition: width 0.3s ease-in-out;
   -moz-transition: width 0.3s ease-in-out;
@@ -122,7 +134,7 @@ p a:hover, .link:hover {
   color: whitesmoke; }
 
 p a:hover:before, .link:hover:before {
-  width: 100%; }
+  width: 102%; }
 
 h1, h2, h3, h4, h5 {
   color: #2f3440; }

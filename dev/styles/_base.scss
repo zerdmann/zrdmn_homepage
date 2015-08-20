@@ -5,6 +5,11 @@ $cream : #F3E3BF;
 $yellow : #F5B94C;
 $black: #222;
 
+abbr {
+	text-transform: lowercase;
+	font-variant: small-caps;
+}
+
 .hidden {
 	display:none;
 	visibility:hidden;
@@ -37,6 +42,12 @@ $black: #222;
 	font-weight:normal;
 }
 
+@font-face {
+	font-family : Abraham Lincoln;
+	src : url(../assets/AbrahamLincoln.ttf);
+	font-weight: normal;
+}
+
 $mont-stack : "Montserrat", sans-serif;
 $card-stack : "Hoefler Text", serif;
 $source-stack : "Source Code Pro", monospace;
@@ -67,6 +78,8 @@ em {
 	word-spacing: 2px;
 }
 
+p {@include font-feature-settings( 'o-num' );}
+
 p a, .link {
 	font-style: normal;
 	//text-transform: lowercase;
@@ -74,9 +87,9 @@ p a, .link {
 	//font-variant: small-caps;
 	//font-size : 1.2em;
 	color : $red;
-	letter-spacing : 1.2px;
-	padding-left : 3px;
-	padding-right : 2px;
+	//letter-spacing : 1.2px;
+	//padding-left : 2px;
+	padding-right : 1px;
 	display:inline-block;
 	position: relative;
 	@include transition (color .2s ease-in-out );
@@ -90,8 +103,8 @@ p a:before, .link:before {
 		width:0;
 		position: absolute;
 		top:-2px;
-		left:0px;
-		background : $ltblue;
+		left:-1px;
+		background : $red;
 		z-index: -10;
 		@include transition ( width .3s ease-in-out );
 }
@@ -101,7 +114,7 @@ p a:hover, .link:hover {
 }
 
 p a:hover:before, .link:hover:before {
-	width:100%;
+	width:102%;
 
 }
 
