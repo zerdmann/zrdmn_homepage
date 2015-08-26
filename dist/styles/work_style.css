@@ -50,7 +50,8 @@ table {
 
 abbr {
   text-transform: lowercase;
-  font-variant: small-caps; }
+  font-variant: small-caps;
+  letter-spacing: 1.5px; }
 
 .hidden {
   display: none;
@@ -66,12 +67,8 @@ abbr {
   font-weight: bold; }
 @font-face {
   font-family: Hoefler Text;
-  src: url(../assets/hoefler-regular.ttf) format("truetype");
+  src: url(../assets/HoeflerText.otf);
   font-style: normal; }
-@font-face {
-  font-family: Hoefler Text;
-  src: url(../assets/hoefler-italic.ttf);
-  font-style: italic; }
 @font-face {
   font-family: Source Code Pro;
   src: url(../assets/SourceCodePro-Regular.otf);
@@ -82,8 +79,7 @@ abbr {
   font-weight: normal; }
 ::selection {
   background-color: #EA6045;
-  color: #fdf2dd;
-  opacity: 1; }
+  color: #fdf2dd; }
 
 * {
   box-sizing: border-box; }
@@ -96,19 +92,35 @@ a {
   color: #222; }
 
 em {
-  font-style: italic;
-  word-spacing: 2px; }
+  color: #666;
+  text-shadow: 0.03em 0 white, -0.03em 0 white, 0 0.03em white, 0 -0.03em white, 0.06em 0 white, -0.06em 0 white, 0.09em 0 white, -0.09em 0 white, 0.12em 0 white, -0.12em 0 white, 0.15em 0 white, -0.15em 0 white;
+  background-image: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(#666, #666);
+  background-size: .05em 1px, .05em 1px, 1px 1px;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-position: 0% 90%, 100% 90%, 0% 90%; }
+  em::selection {
+    text-shadow: 0.03em 0 #EA6045, -0.03em 0 #EA6045, 0 0.03em #EA6045, 0 -0.03em #EA6045, 0.06em 0 #EA6045, -0.06em 0 #EA6045, 0.09em 0 #EA6045, -0.09em 0 #EA6045, 0.12em 0 #EA6045, -0.12em 0 #EA6045, 0.15em 0 #EA6045, -0.15em 0 #EA6045;
+    background-image: linear-gradient(#EA6045, #EA6045), linear-gradient(#EA6045, #EA6045), linear-gradient(#fdf2dd, #fdf2dd);
+    background-size: .05em 1px, .05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position: 0% 90%, 100% 90%, 0% 90%; }
 
 p {
+  color: #222;
   -webkit-font-feature-settings: "o-num";
   -moz-font-feature-settings: "o-num";
   -ms-font-feature-settings: "o-num";
-  font-feature-settings: "o-num"; }
+  font-feature-settings: "o-num";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga";
+  font-feature-settings: "liga"; }
 
 p a, .link {
   font-style: normal;
   font-family: "Hoefler Text", serif;
   color: #EA6045;
+  letter-spacing: .75px;
   padding-right: 1px;
   display: inline-block;
   position: relative;
@@ -119,7 +131,7 @@ p a, .link {
 p a:before, .link:before {
   content: ' ';
   display: inline-block;
-  height: 1.8rem;
+  height: 2rem;
   width: 0;
   position: absolute;
   top: -2px;
@@ -310,14 +322,13 @@ nav {
     padding-top: 2.7vw; } }
 .wrapper {
   float: left;
-  width: calc(95% - 220px - 7.321vw);
   height: 100%;
   margin-bottom: 3rem; }
 
 .work {
   position: relative;
   float: left;
-  height: 280px;
+  min-height: 280px;
   max-width: 960px;
   width: 100%;
   display: block;
@@ -332,22 +343,22 @@ nav {
     opacity: 1;
     display: block;
     width: inherit;
-    height: inherit;
+    min-height: 100%;
     -webkit-transition: opacity 0.5s ease-in-out;
     -moz-transition: opacity 0.5s ease-in-out;
     transition: opacity 0.5s ease-in-out;
-    background-position: 30% 10%; }
+    background-position: 30% 10%;
+    background-size: cover; }
   .work .content {
     position: relative;
     margin-right: 2rem;
-    height: 78%;
     margin: 2rem;
     z-index: 10;
     padding: 1.5rem;
-    background: rgba(240, 240, 240, 0.7);
-    -webkit-transition: background 0.5s ease-in-out;
-    -moz-transition: background 0.5s ease-in-out;
-    transition: background 0.5s ease-in-out; }
+    background: rgba(240, 240, 240, 0.9);
+    -webkit-transition: height 0.5s ease-in-out;
+    -moz-transition: height 0.5s ease-in-out;
+    transition: height 0.5s ease-in-out; }
     .work .content h3 {
       font-size: 1.5rem;
       text-transform: uppercase;
@@ -360,13 +371,14 @@ nav {
       line-height: 1.875rem;
       font-weight: lighter;
       margin-top: 1.5rem;
-      margin-left: 1rem; }
+      margin-left: 1rem;
+      opacity: 1;
+      -webkit-transition: opacity 0.3s ease-in-out;
+      -moz-transition: opacity 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out; }
 
 .work:hover:after {
   opacity: 0; }
-
-.work:hover .content {
-  background: rgba(240, 240, 255, 0.9); }
 
 #koe {
   background-image: url("/img/koe_hover.png"); }
@@ -393,5 +405,55 @@ nav {
   background-image: url("/img/painting_hover.png"); }
   #other::after {
     background-image: url("/img/painting.png"); }
+
+@media all and (min-width: 1081px) {
+  .wrapper {
+    width: calc(95% - 220px - 7.321vw); }
+
+  .header#other h3 {
+    left: 14vw;
+    font-size: 7rem;
+    letter-spacing: -2px; } }
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+  .wrapper {
+    min-width: 200px;
+    width: calc(95% - 180px); }
+    .wrapper#main {
+      width: calc(95% - 220px); }
+
+  .header#other h3 {
+    left: 15vw;
+    letter-spacing: -2px;
+    font-size: 5rem; } }
+@media screen and (min-width: 951px) {
+  .content {
+    height: 13.5rem; }
+
+  .work:hover .content {
+    height: 4.375rem; }
+    .work:hover .content p {
+      opacity: 0; } }
+@media screen and (max-width: 950px) {
+  .work {
+    background-size: cover; }
+
+  .content {
+    height: inherit;
+    min-height: 13.5rem; } }
+@media screen and (max-width: 768px) {
+  .aside {
+    float: none;
+    margin: 2rem auto; }
+
+  .header#other h3 {
+    left: 2%;
+    font-size: 3.5rem;
+    letter-spacing: 0px; }
+
+  .header {
+    background-position: 50% 50%; }
+
+  html {
+    overflow-x: hidden; } }
 
 /*# sourceMappingURL=work_style.css.map */

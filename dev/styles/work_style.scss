@@ -5,7 +5,7 @@
 
 .wrapper{
 	float:left;
-	width: calc(95% - 220px - 7.321vw);
+	//width: calc(95% - 220px - 7.321vw);
 	//background: green;
 	height:100%;
 	margin-bottom:3rem;
@@ -14,7 +14,7 @@
 .work {
 	position:relative;
 	float:left;
-	height: 280px;
+	min-height: 280px;
 	max-width: 960px;
 	//min-width : rem(700px);
 	width:100%;
@@ -31,9 +31,10 @@
 		opacity:1;
 		display:block;
 		width:inherit;
-		height:inherit;
+		min-height:100%;
 		@include transition(opacity .5s ease-in-out);
 		background-position: 30% 10%;
+		background-size: cover;
 
 
 	}
@@ -41,12 +42,12 @@
 	.content {
 		position: relative;
 		margin-right:2rem;
-		height: 78%;
 		margin:2rem;
 		z-index: 10;
 		padding:1.5rem;
-		background : rgba(240,240,240,.7);
-		@include transition(background .5s ease-in-out);
+		background : rgba(240,240,240,.9);
+		@include transition(height .5s ease-in-out);
+
 
 		h3{
 			font-size: rem(24);
@@ -64,6 +65,9 @@
 			font-weight: lighter;
 			margin-top: 1.5rem;
 			margin-left:1rem;
+			opacity:1;
+			@include transition(opacity .3s ease-in-out);
+
 
 		}
 	}
@@ -74,9 +78,8 @@
 	opacity:0;
 }
 
-.work:hover .content {
-	background : rgba(240,240,255, 0.9);
-}
+
+
 
 #koe{
 	background-image: url("/img/koe_hover.png");
@@ -109,3 +112,5 @@
 	background-image: url("/img/painting.png"); }
 
 }
+
+@import "work-breakpoints";

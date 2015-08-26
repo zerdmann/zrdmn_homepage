@@ -4,10 +4,20 @@ $ltblue : #3A4C5B;
 $cream : #F3E3BF;
 $yellow : #F5B94C;
 $black: #222;
+$grey: #666;
+
+@mixin smart_underline($color, $bg){
+	text-shadow: .03em 0 $bg, -.03em 0 $bg, 0 .03em $bg, 0 -.03em $bg, .06em 0 $bg, -.06em 0 $bg, .09em 0 $bg, -.09em 0 $bg, .12em 0 $bg, -.12em 0 $bg, .15em 0 $bg, -.15em 0 $bg;  
+ 	background-image: linear-gradient($bg, $bg), linear-gradient($bg, $bg), linear-gradient($color, $color);
+  	background-size: .05em 1px, .05em 1px, 1px 1px;
+  	background-repeat: no-repeat, no-repeat, repeat-x;
+  	background-position: 0% 90%, 100% 90%, 0% 90%;
+}
 
 abbr {
 	text-transform: lowercase;
 	font-variant: small-caps;
+	letter-spacing: 1.5px;
 }
 
 .hidden {
@@ -28,14 +38,10 @@ abbr {
 
 @font-face {
 	font-family : Hoefler Text;
-	src : url(../assets/hoefler-regular.ttf) format('truetype');
+	src : url(../assets/HoeflerText.otf);
 	font-style : normal;
 }
-@font-face {
-	font-family : Hoefler Text;
-	src : url(../assets/hoefler-italic.ttf);
-	font-style : italic;
-}
+
 @font-face {
 	font-family : Source Code Pro;
 	src : url(../assets/SourceCodePro-Regular.otf);
@@ -55,8 +61,6 @@ $source-stack : "Source Code Pro", monospace;
 ::selection {
 	background-color: $red;
 	color: lighten($yellow, 30%);
-	opacity:1;
-
 }
 
 * {
@@ -74,11 +78,21 @@ a {
 }
 
 em {
-	font-style: italic;
-	word-spacing: 2px;
+	color: $grey;
+	@include smart_underline($grey, white);
+
+	&::selection {
+			@include smart_underline(lighten($yellow, 30%), $red); 
+
+	}
+
 }
 
-p {@include font-feature-settings( 'o-num' );}
+p {
+	color: $black;
+	@include font-feature-settings( 'o-num' );
+	@include font-feature-settings( 'liga' );
+}
 
 p a, .link {
 	font-style: normal;
@@ -87,7 +101,7 @@ p a, .link {
 	//font-variant: small-caps;
 	//font-size : 1.2em;
 	color : $red;
-	//letter-spacing : 1.2px;
+	letter-spacing : .75px;
 	//padding-left : 2px;
 	padding-right : 1px;
 	display:inline-block;
@@ -99,7 +113,7 @@ p a, .link {
 p a:before, .link:before {
 		content:' ';
 		display: inline-block;
-		height:1.8rem;
+		height:2rem;
 		width:0;
 		position: absolute;
 		top:-2px;

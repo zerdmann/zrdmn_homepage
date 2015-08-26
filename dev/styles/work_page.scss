@@ -3,9 +3,9 @@
 @import "base";
 @import "nav";
 
-#wrapper{
+.wrapper{
 	float:right;
-	width: calc(100% - 220px - 7.321vw);
+	//width: calc(100% - 220px - 7.321vw);
 	max-width: 1200px;
 	//background: green;
 	height:100%;
@@ -76,12 +76,9 @@ section.header {
 
 	h3{
 		font-family: $mont-stack;
-		font-size: 7rem;
 		bottom:rem(200);
-		left:40%;
 		color: rgb(250,250,250);
 		text-transform: uppercase;
-		letter-spacing: -2px;
 		font-kerning: normal;
 		text-shadow: -2px 1px 2px $red;
 	}
@@ -120,3 +117,4 @@ section#body_copy{
 	}
 }
 
+@import "work-breakpoints";
