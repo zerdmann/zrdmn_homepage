@@ -5,13 +5,22 @@ module.exports = function(grunt) {
   grunt.initConfig({
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
-      '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-      '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-      '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-      ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     // Task configuration.
-    sass : {
+  bake: {
+      dev: {
+        files : {
+          "dist/index.html" : "dev/index.html",
+          "dist/work/index.html" : "dev/work/index.html",
+          "dist/work/penzeys/index.html" : "dev/work/penzeys/index.html",
+          "dist/work/wedding/index.html" : "dev/work/wedding/index.html",
+          "dist/work/koe/index.html" : "dev/work/koe/index.html",
+          "dist/work/johnmarla/index.html" : "dev/work/johnmarla/index.html",
+          "dist/work/other/index.html" : "dev/work/other/index.html",
+        },
+      },
+    },
+
+  sass : {
       dev : {
         files : {
           "dist/styles/style.css" : "dev/styles/style.scss",
@@ -20,10 +29,42 @@ module.exports = function(grunt) {
         }
       }
     },
-    watch: {
-      options : {
-        livereload : true,
-      },
+
+  imagemin : {
+    dynamic : {
+        files : [{
+          expand : true,
+          cwd : 'dev/img/',
+          src : ['**/*.{png,jpg,gif,svg}'],
+          dest : 'dist/img/'
+        }]
+      }
+    },
+
+  clean : {
+    build : ['dist/']
+    },
+  copy : {
+      assets: {
+        expand: true,
+        cwd : 'dev/assets/',
+        src : '**',
+        dest : 'dist/assets/',
+        fiter: 'isFile'
+      }
+    },
+ //Development tasks - Server connnect and Watch   
+    connect : {
+      server : {
+        options: {
+          base: 'dist',
+          keepalive: true,
+          open: true
+        }
+      }
+
+    },
+   watch: {
       sass : {
         files : ['dev/styles/*.scss'],
         tasks : ['sass']
@@ -41,60 +82,7 @@ module.exports = function(grunt) {
         tasks : ['newer:copy:assets']
       }
     },
-    bake: {
-      dev: {
-        options :{
-          dev : true
-        },
-        files : {
-          "dist/index.html" : "dev/index.html",
-          "dist/work/index.html" : "dev/work/index.html",
-          "dist/work/penzeys/index.html" : "dev/work/penzeys/index.html",
-          "dist/work/wedding/index.html" : "dev/work/wedding/index.html",
-          "dist/work/koe/index.html" : "dev/work/koe/index.html",
-          "dist/work/johnmarla/index.html" : "dev/work/johnmarla/index.html",
-          "dist/work/other/index.html" : "dev/work/other/index.html",
-        },
-      },
-      commit: {
-        options: {
-        },
-        files : {
-          "dist/index.html" : "dev/index.html",
-          "dist/work/index.html" : "dev/work/index.html"
-        },       
-      }
-    },
-    imagemin : {
-      dynamic : {
-        files : [{
-          expand : true,
-          cwd : 'dev/img/',
-          src : ['**/*.{png,jpg,gif,svg}'],
-          dest : 'dist/img/'
-        }]
-      }
-    },
-    clean : ['dist/'],
-    copy : {
-      assets: {
-        expand: true,
-        cwd : 'dev/assets/',
-        src : '**',
-        dest : 'dist/assets/',
-        fiter: 'isFile'
-      }
-    },
-    connect : {
-      server : {
-        options: {
-          base: 'dist',
-          keepalive: true,
-          open: true
-        }
-      }
-
-    }  
+ 
   });
 
   // These plugins provide necessary tasks.
@@ -107,9 +95,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-connect');
 
-  // Default task.
-  grunt.registerTask('default', ['sass', 'bake:dev', 'newer:imagemin', 'connect']);
-  grunt.registerTask('prep', ['clean', 'copy:assets', 'bake:dev', 'sass', 'imagemin']);
-  grunt.registerTask('commit', ['clean', 'copy:assets', 'bake:commit', 'sass', 'imagemin']);
 
+  // Default task.
+  grunt.registerTask('prep', ['clean', 'copy:assets', 'bake', 'sass', 'imagemin', 'connect']);
+  grunt.registerTask('build', ['clean', 'copy:assets', 'bake', 'sass', 'imagemin']);
+  grunt.registerTask('dev', ['bake','sass','imagemin']);
+  grunt.registerTask('default', ['dev']);
 };

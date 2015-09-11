@@ -35,16 +35,14 @@ nav {
 	}
 	li:hover:not(.disabled) {
 				background-color: $ltblue;
-				a{
-					color: lighten($cream, 30%);
-				}
+
 
 				h4 {
-					color:lighten($ltblue, 12%);
+					color:lighten($ltblue, 18%);
 				}
 
 				h3{
-					color:lighten($ltblue, 10%);
+					color:lighten($ltblue, 15%);
 				}
 
 
@@ -55,7 +53,13 @@ nav {
 		@include padding(rem( 10 ) null rem(18));		
 		font-size: rem( 14 );
 		font-family: $mont-stack;
+	}
 
+	h4.number:after{
+		content:'/';
+		display:inline-block;
+		color:$red;
+		margin-left:.2rem;
 	}
 
 	h3 {
@@ -76,32 +80,11 @@ nav {
 		line-height: rem(18);
 		font-family: $source-stack;
 		@include padding(null null rem(10));
+		color:$ltblue;
 
 	}
 }
 
-	.disabled {
-		opacity: .9;
-		background-color: #444;
-		position:relative;
 
-		a, p, h3, h4{
-			color: desaturate($dkblue, 10%);
-		}
-
-		&:after {
-			color:#ddd;
-			content:"COMING";
-			position:absolute;
-			top:40%;
-			left: 2rem;
-			opacity:1;
-			display:block;
-			width:inherit;
-			height:inherit;
-			font-family: $mont-stack;
-			font-size: rem(30);
-		}
-	}
 
 @import "nav-breakpoints";

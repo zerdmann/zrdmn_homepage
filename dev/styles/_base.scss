@@ -17,7 +17,7 @@ $grey: #666;
 abbr {
 	text-transform: lowercase;
 	font-variant: small-caps;
-	letter-spacing: 1.5px;
+	letter-spacing: .07em;
 }
 
 .hidden {
@@ -118,13 +118,14 @@ p a:before, .link:before {
 		position: absolute;
 		top:-2px;
 		left:-1px;
-		background : $red;
+		background : $ltblue;
 		z-index: -10;
 		@include transition ( width .3s ease-in-out );
 }
 
 p a:hover, .link:hover {
-	color: rgb(245,245,245);
+	//color: lighten($ltblue, 30%);
+	color:$yellow;
 }
 
 p a:hover:before, .link:hover:before {

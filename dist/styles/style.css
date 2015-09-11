@@ -51,7 +51,7 @@ table {
 abbr {
   text-transform: lowercase;
   font-variant: small-caps;
-  letter-spacing: 1.5px; }
+  letter-spacing: .07em; }
 
 .hidden {
   display: none;
@@ -136,14 +136,14 @@ p a:before, .link:before {
   position: absolute;
   top: -2px;
   left: -1px;
-  background: #EA6045;
+  background: #3A4C5B;
   z-index: -10;
   -webkit-transition: width 0.3s ease-in-out;
   -moz-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out; }
 
 p a:hover, .link:hover {
-  color: whitesmoke; }
+  color: #F5B94C; }
 
 p a:hover:before, .link:hover:before {
   width: 102%; }
@@ -176,17 +176,20 @@ nav {
     transition: background-color 0.4s; }
   nav li:hover:not(.disabled) {
     background-color: #3A4C5B; }
-    nav li:hover:not(.disabled) a {
-      color: white; }
     nav li:hover:not(.disabled) h4 {
-      color: #526b80; }
+      color: #5e7b93; }
     nav li:hover:not(.disabled) h3 {
-      color: #4e667a; }
+      color: #58738a; }
   nav h4 {
     padding-top: 0.625rem;
     padding-bottom: 1.125rem;
     font-size: 0.875rem;
     font-family: "Montserrat", sans-serif; }
+  nav h4.number:after {
+    content: '/';
+    display: inline-block;
+    color: #EA6045;
+    margin-left: .2rem; }
   nav h3 {
     color: #3A4C5B;
     text-transform: uppercase;
@@ -199,26 +202,8 @@ nav {
     font-size: 0.75rem;
     line-height: 1.125rem;
     font-family: "Source Code Pro", monospace;
-    padding-bottom: 0.625rem; }
-
-.disabled {
-  opacity: .9;
-  background-color: #444;
-  position: relative; }
-  .disabled a, .disabled p, .disabled h3, .disabled h4 {
-    color: #35363a; }
-  .disabled:after {
-    color: #ddd;
-    content: "COMING";
-    position: absolute;
-    top: 40%;
-    left: 2rem;
-    opacity: 1;
-    display: block;
-    width: inherit;
-    height: inherit;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.875rem; }
+    padding-bottom: 0.625rem;
+    color: #3A4C5B; }
 
 @media screen and (min-width: 1081px) {
   nav {
